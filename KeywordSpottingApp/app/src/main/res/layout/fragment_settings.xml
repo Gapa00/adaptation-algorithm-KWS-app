@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment"
+    android:background="@color/dark_grey">
+
+    <TextView
+        android:id="@+id/volumeEnergyThresholdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="128dp"
+        android:text="@string/settings_text_energy"
+        android:textColor="@color/pewter"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/settingsSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:valueFrom="0.001"
+        android:valueTo="0.1"
+        android:value="0.01"
+        app:layout_constraintTop_toBottomOf="@id/volumeEnergyThresholdLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/minimalConfidenceThresholdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/settings_text_confidence"
+        android:textSize="20sp"
+        android:textColor="@color/pewter"
+        app:layout_constraintBaseline_toBaselineOf="@id/settingsEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/settingsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        android:padding="10dp"
+        android:text="@string/settings_energy_default"
+        android:textSize="20sp"
+        android:textColor="@color/pewter"
+        android:backgroundTint="@color/pewter"
+        app:layout_constraintStart_toEndOf="@+id/minimalConfidenceThresholdLabel"
+        app:layout_constraintTop_toBottomOf="@id/settingsSlider" />
+
+    <TextView
+        android:id="@+id/smallToMediumThresholdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/smallThreshLabel"
+        android:textColor="@color/pewter"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingsEditText" />
+
+    <EditText
+        android:id="@+id/smallToMediumThresholdEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:backgroundTint="@color/pewter"
+        android:inputType="number"
+        android:padding="10dp"
+        android:text="40.0"
+        android:textColor="@color/pewter"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/smallToMediumThresholdLabel"
+        app:layout_constraintTop_toBottomOf="@id/settingsEditText" />
+
+    <TextView
+        android:id="@+id/mediumToLargeThresholdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/mediumThreshLabel"
+        android:textColor="@color/pewter"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smallToMediumThresholdEditText" />
+
+    <EditText
+        android:id="@+id/mediumToLargeThresholdEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:backgroundTint="@color/pewter"
+        android:inputType="number"
+        android:padding="10dp"
+        android:text="80.0"
+        android:textColor="@color/pewter"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/mediumToLargeThresholdLabel"
+        app:layout_constraintTop_toBottomOf="@id/smallToMediumThresholdEditText" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="20dp"
+        android:text="@string/settings_update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

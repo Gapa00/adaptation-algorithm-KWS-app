@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Adaptive Keyword Spotting App</string>
+    <string name="notification_channel_name">Keyword Spotting Service Channel</string>
+    <string name="channel_id">RecordingServiceChannel</string>
+    <string name="notification_text">Spotting Keywords…</string>
+    <string name="new_detection">Detected word: </string>
+
+    <string name="detected_text">Detected: %1$s</string>
+    <string name="confidence_text">Confidence: %1$s</string>
+    <string name="timestamp_text">Timestamp</string>
+
+    <string name="small_model">Small_model.tflite</string>
+    <string name="medium_model">Medium_model.tflite</string>
+    <string name="large_model">Large_model.tflite</string>
+
+    <string name="action">ACTION</string>
+    <string name="action_start">START</string>
+    <string name="action_stop">STOP</string>
+    <string name="detection_results">detectionResults</string>
+    <string name="recording_desc">Record / Stop recording</string>
+
+    <string name="settings_desc">Settings</string>
+    <string name="settings_slider">slider_value</string>
+    <string name="settings_input">text_value</string>
+    <string name="smallThreshLabel">Small to Medium Threshold:</string>
+    <string name="smallThresh">small_to_medium</string>
+    <string name="mediumThreshLabel">Medium to Large Threshold:</string>
+    <string name="mediumThresh">medium_to_large</string>
+    <string name="settings_text_energy">Sound Energy Threshold:</string>
+    <string name="settings_energy_default">80.0</string>
+    <string name="settings_text_confidence">Minimal Confidence Threshold:</string>
+    <string name="settings_update">UPDATE</string>
+
+
+
+
+
+</resources>
